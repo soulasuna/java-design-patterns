@@ -54,7 +54,6 @@ public class Client {
                     Object result = null;
                     try {
                         advice.beforeExecute(args);
-                        System.out.println("执行完成");
                         result = method.invoke(conversionData, args);
                         advice.afterExecute(new Object[]{result});
                         return result;
