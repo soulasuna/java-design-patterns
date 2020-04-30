@@ -39,7 +39,4 @@ public class ConversionString {
         Assert.hasText(input, "error : input string can not empty");
         return input.toUpperCase();
     }
-
-
-
 }

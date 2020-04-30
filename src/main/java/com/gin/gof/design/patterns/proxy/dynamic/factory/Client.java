@@ -44,8 +44,4 @@ public class Client {
                 ProxyFactory.getProxy(conversion1, new LogProxyAdvice());
         proxy.stringToUpCase("aa");
     }
-
-
-
-
 }

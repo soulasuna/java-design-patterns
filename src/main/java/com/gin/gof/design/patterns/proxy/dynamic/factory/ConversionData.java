@@ -30,9 +30,6 @@ public interface ConversionData {
     /**
      * 字符串小写转大写
      *
-     *
-     *
-     *
      * @param input 输入字符串
      * @return 格式化以后字符串
      */

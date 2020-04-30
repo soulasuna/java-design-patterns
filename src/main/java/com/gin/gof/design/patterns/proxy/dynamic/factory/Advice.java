@@ -74,6 +74,4 @@ public interface Advice {
      * @date 2020/4/30 11:03
      */
     void afterReturnExecute(Object[] args);
-
-
 }
