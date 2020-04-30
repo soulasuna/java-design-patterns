@@ -13,26 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.gin.gof.design.patterns.proxy.dynamic.cglib;
+package com.gin.gof.design.patterns.proxy.dynamic.factory;
 
 /**
  * <p>
- * Description: 处理数据转换的接口
+ * Description: 转换数据
  * </p>
- * ClassName: ConversionDataImpl
+ * ClassName: ConversionData
  *
  * @author dnt
  * @version V1.0.0
- * @date 2020/4/29、15:48
+ * @date 2020/4/30、14:03
  * @since jdk1.8
  */
-public class ConversionDataImpl{
+public interface ConversionData {
     /**
-     * 字符串转换大写
-     * @param input    输入字符串
-     * @return          处理结果
+     * 字符串小写转大写
+     *
+     * @param input 输入字符串
+     * @return 格式化以后字符串
      */
-    public String StringUpCaseFormat(String input) {
-        return input == null ? "" : input.toUpperCase();
-    }
+    String stringToUpCase(String input);
 }

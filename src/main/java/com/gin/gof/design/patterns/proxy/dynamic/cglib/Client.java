@@ -20,6 +20,9 @@ import com.gin.gof.design.patterns.proxy.dynamic.jdk.LogProxyAdvice;
 import com.gin.gof.design.patterns.proxy.dynamic.jdk.ProxyAdviceAble;
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.MethodInterceptor;
+import org.springframework.cglib.proxy.MethodProxy;
+
+import java.lang.reflect.Method;
 
 /**
  * <p>
@@ -34,8 +37,8 @@ import org.springframework.cglib.proxy.MethodInterceptor;
  */
 public class Client {
     public static void main(String[] args) {
-        ConversionDataImpl conversionData =
-                createProxy(ConversionDataImpl.class,new LogProxyAdvice());
+        ConversionData conversionData =
+                createProxy(ConversionData.class,new LogProxyAdvice());
         String outPut = conversionData.StringUpCaseFormat("bbb");
         System.out.println(outPut);
     }
@@ -46,7 +49,7 @@ public class Client {
      * @param advice    代理策略接口实现对象 {@link ProxyAdviceAble}
      * @return          对象的代理对象
      */
-    private static ConversionDataImpl createProxy(Class<?> clazz, ProxyAdviceAble advice) {
+    private static ConversionData createProxy(Class<?> clazz, ProxyAdviceAble advice) {
 
         // 创建Enhancer对象，类似于JDK动态代理的Proxy类
         Enhancer enhancer = new Enhancer();
@@ -68,7 +71,7 @@ public class Client {
                     }
                     return result;
                 });
-        return (ConversionDataImpl) enhancer.create();
+        return (ConversionData) enhancer.create();
     }
 
 
