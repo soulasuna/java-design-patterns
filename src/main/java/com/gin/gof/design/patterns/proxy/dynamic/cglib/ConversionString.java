@@ -19,23 +19,27 @@ import org.springframework.util.Assert;
 
 /**
  * <p>
- * Description: 处理数据转换的接口
+ * Description: 字符串转化
  * </p>
- * ClassName: ConversionData
+ * ClassName: ConversionString
  *
  * @author dnt
  * @version V1.0.0
- * @date 2020/4/30、14:27
+ * @date 2020/4/30、14:19
  * @since jdk1.8
  */
-public class ConversionData {
+public class ConversionString {
     /**
-     * 字符串转换大写
-     * @param input    输入字符串
-     * @return          处理结果
+     * 字符串小写转大写
+     *
+     * @param input 输入字符串
+     * @return 格式化字符串
      */
-    public String StringUpCaseFormat(String input) {
+    public String stringToUpCase(String input) {
         Assert.hasText(input, "error : input string can not empty");
-        return input == null ? "" : input.toUpperCase();
+        return input.toUpperCase();
     }
+
+
+
 }

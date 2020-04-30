@@ -37,19 +37,19 @@ import java.lang.reflect.Method;
  */
 public class Client {
     public static void main(String[] args) {
-        ConversionData conversionData =
-                createProxy(ConversionData.class,new LogProxyAdvice());
-        String outPut = conversionData.StringUpCaseFormat("bbb");
+        ConversionString conversion =
+                createProxy(ConversionString.class,new LogProxyAdvice());
+        String outPut = conversion.stringToUpCase("bbb");
         System.out.println(outPut);
     }
 
     /**
      * 获得对象的代理类
-     * @param clazz     实现被代理接口的对象实现 {@link ConversionData}
+     * @param clazz     实现被代理接口的对象实现 {@link ConversionString}
      * @param advice    代理策略接口实现对象 {@link ProxyAdviceAble}
      * @return          对象的代理对象
      */
-    private static ConversionData createProxy(Class<?> clazz, ProxyAdviceAble advice) {
+    private static ConversionString createProxy(Class<?> clazz, ProxyAdviceAble advice) {
 
         // 创建Enhancer对象，类似于JDK动态代理的Proxy类
         Enhancer enhancer = new Enhancer();
@@ -71,7 +71,7 @@ public class Client {
                     }
                     return result;
                 });
-        return (ConversionData) enhancer.create();
+        return (ConversionString) enhancer.create();
     }
 
 

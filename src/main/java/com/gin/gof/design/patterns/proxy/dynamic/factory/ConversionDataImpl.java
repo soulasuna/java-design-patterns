@@ -19,7 +19,7 @@ import org.springframework.util.Assert;
 
 /**
  * <p>
- * Description:
+ * Description: 转换数据接口实现
  * </p>
  * ClassName: ConversionDataImpl
  *
