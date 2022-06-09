@@ -36,6 +36,7 @@ public class Client {
         // 烹饪炒土豆丝
         cooking = new PotatoFlossCooking();
         cooking.cook();
-
+        
+        System.out.println("test-pick");
     }
 }
