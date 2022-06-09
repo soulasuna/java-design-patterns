@@ -35,5 +35,7 @@ public class Client {
         System.err.println(sheep == clone);
         // 实现对象深拷贝,打印结果false
         System.err.println(sheep.getFather() == clone.getFather());
+    
+        System.out.println("test pick");
     }
 }
