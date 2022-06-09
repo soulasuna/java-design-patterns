@@ -37,5 +37,6 @@ public class Client {
         System.err.println(sheep.getFather() == clone.getFather());
     
         System.out.println("test pick");
+        System.out.println("test pick aaa");
     }
 }
